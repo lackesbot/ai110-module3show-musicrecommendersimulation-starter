@@ -18,14 +18,14 @@ Replace this paragraph with your own summary of what your version does.
 ## How The System Works
 
 Explain your design in plain language.
+When it comes to platforms like Spotify, recommending songs to the user takes in and uses a number of variable. Variables such as mood, genre, energy, tempo, acoustiness and many more are used. For my recommender, I'll be focusing on only 4 variables; genre, mood, energy & acousticness. I'm focusing on these variables because they focus on what the user inputs rather than a variable number that is computed such as how tempo & valence are. The scoring system is heavliy weighted on the genre and thus somne songs taht might fit the category will get a low score.
 
 Some prompts to answer:
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+- What features does each `Song` use in your system: Genre, Mood, Energy & Acoustic 
+- What information does your `UserProfile` store. It store what the user likes and prefers in terms of category. 
+- How does your `Recommender` compute a score for each song. It will compare and compute the score for each then rank the top nones. 
+- How do you choose which songs to recommend. By comparing and contrasting them with other songs and whichever is the highest wins. 
 
 You can include a simple diagram or bullet list if helpful.
 

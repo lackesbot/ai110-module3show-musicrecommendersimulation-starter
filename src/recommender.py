@@ -1,6 +1,14 @@
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 
+GENRE_WEIGHT = 30
+MOOD_WEIGHT = 30
+ENERGY_WEIGHT = 30
+ACOUSTIC_WEIGHT = 10
+
+score = 0
+
+
 @dataclass
 class Song:
     """
@@ -61,7 +69,23 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     """
     # TODO: Implement scoring logic using your Algorithm Recipe from Phase 2.
     # Expected return format: (score, reasons)
-    return []
+
+    if song["genre"] == user_prefs["favorite_genre"]:
+        score += GENRE_WEIGHT 
+
+    if song["mood"] == user_prefs["favorite_mood"]:
+        score += MOOD_WEIGHT
+
+    energyS = 1 - abs(song["energy"] == user_prefs["target_energy"])
+    score += ENERGY_WEIGHT * energyS
+
+
+    acousticS = 1 - abs(song["acousticness"] == user_prefs["likes_acoustic"])
+    score += ACOUSTIC_WEIGHT * acousticS
+
+
+
+  
 
 def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tuple[Dict, float, str]]:
     """
