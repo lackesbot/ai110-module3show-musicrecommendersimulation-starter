@@ -71,12 +71,38 @@ You can add more tests in `tests/test_recommender.py`.
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
 ```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
+Loading songs from data/songs.csv...
+
+========================================
+TOP RECOMMENDATIONS
+========================================
+
+1. Sunrise City  (Score: 62.90)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+2. Gym Hero  (Score: 52.55)
+     - Genre matches (+30)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+3. Rooftop Lights  (Score: 30.90)
+     - Mood matches (+10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+4. Concrete Throne  (Score: 24.20)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+5. Pulse Horizon  (Score: 23.20)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+========================================
+
 ```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
