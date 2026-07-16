@@ -103,6 +103,142 @@ TOP RECOMMENDATIONS
 
 ========================================
 
+========================================
+TOP RECOMMENDATIONS - High energy pop
+========================================
+
+1. Sunrise City  (Score: 62.00)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+2. Gym Hero  (Score: 54.05)
+     - Genre matches (+30)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+3. Rooftop Lights  (Score: 29.40)
+     - Mood matches (+10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+4. Pulse Horizon  (Score: 24.10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+5. Storm Runner  (Score: 23.85)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+========================================
+TOP RECOMMENDATIONS - Chill lofi
+========================================
+
+1. Midnight Coding  (Score: 56.10)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+2. Library Rain  (Score: 55.65)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+3. Focus Flow  (Score: 45.70)
+     - Genre matches (+30)
+     - Energy matches (15)
+
+4. Spacewalk Thoughts  (Score: 25.50)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+5. Hammock Sundown  (Score: 18.80)
+     - Energy matches (15)
+
+========================================
+TOP RECOMMENDATIONS - Deep intense rock
+========================================
+
+1. Storm Runner  (Score: 56.00)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+2. Gym Hero  (Score: 25.20)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+3. Rooftop Lights  (Score: 16.25)
+     - Energy matches (15)
+
+4. Coffee Shop Stories  (Score: 15.80)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+5. Sunrise City  (Score: 15.45)
+     - Energy matches (15)
+
+========================================
+TOP RECOMMENDATIONS - Adversarial: out-of-range energy
+========================================
+
+1. Sunrise City  (Score: 53.00)
+     - Genre matches (+30)
+     - Mood matches (+10)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+2. Gym Hero  (Score: 45.95)
+     - Genre matches (+30)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+3. Rooftop Lights  (Score: 20.40)
+     - Mood matches (+10)
+     - Acousticness matches (+10)
+
+4. Iron Descent  (Score: 16.75)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+5. Storm Runner  (Score: 15.15)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+========================================
+TOP RECOMMENDATIONS - Adversarial: nonexistent genre
+========================================
+
+1. Midnight Coding  (Score: 26.70)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+2. Library Rain  (Score: 24.15)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+3. Spacewalk Thoughts  (Score: 22.50)
+     - Mood matches (+10)
+     - Energy matches (15)
+
+4. Velvet Hours  (Score: 20.25)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+5. Concrete Throne  (Score: 19.70)
+     - Energy matches (15)
+     - Acousticness matches (+10)
+
+========================================
+TOP RECOMMENDATIONS - Adversarial: missing key
+========================================
+KeyError raised as expected: missing 'favorite_mood'
+
+========================================
+
+
+
 ```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->

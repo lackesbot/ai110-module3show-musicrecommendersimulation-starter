@@ -2,8 +2,7 @@
 
 ## 1. Model Name  
 
-Give your model a short, descriptive name.  
-Example: **VibeFinder 1.0**  
+musicRecommender02
 
 ---
 
@@ -13,9 +12,9 @@ Describe what your recommender is designed to do and who it is for.
 
 Prompts:  
 
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+- What kind of recommendations does it generate. It generates music recommndation based on your  preferences such as the genre, mood, acousticness, valence etc. 
+- What assumptions does it make about the user. It assumes that what the user has put is what you want the output of. 
+- Is this for real users or classroom exploration. For classroom, because I feel like right now at this stage there is so much we can add to make it better 
 
 ---
 
@@ -25,13 +24,10 @@ Explain your scoring approach in simple language.
 
 Prompts:  
 
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
-
+- What features of each song are used (genre, energy, mood, etc.)  : energy, mood, genre, acouisticness, tempo, valence, danceability 
+- What user preferences are considered : energy, mood, genre, acouisticness
+- How does the model turn those into a score: it comapres the song and see if it matches the user preferences then does calculation to add it with points. 
+- What changes did you make from the starter logic: genre match is weighted heavily that the rest and instead of having the same weight each preference has a different weight
 ---
 
 ## 4. Data  
@@ -63,6 +59,11 @@ Prompts:
 
 Where the system struggles or behaves unfairly. 
 
+Genre distribution is skewed, but GENRE_WEIGHT (30) doesn't account for it. A user who loves classical or country can never get more than one +30 genre bonus in their entire top-5 — the other 4 slots are filled by songs that don't match their genre at all, ranked only on energy/mood/acoustic. A lofi or pop fan gets multiple genre-boosted songs to choose from. Net effect: niche-genre users' "recommendations" are mostly filler from whatever's energy-adjacent, while pop/lofi fans get a richer genuinely-matching list. The system structurally favors the two most-represented genres.
+
+likes_acoustic is boolean, but acousticness in the data is continuous (0.03–0.95). Anyone whose actual taste is "somewhat acoustic" (like the r&b track at 0.40 or country at 0.60) has no way to express it — they're mapped to whichever extreme is closer, distorting scores for every song in between.
+
+
 Prompts:  
 
 - Features it does not consider  
@@ -78,10 +79,10 @@ How you checked whether the recommender behaved as expected.
 
 Prompts:  
 
-- Which user profiles you tested  
-- What you looked for in the recommendations  
-- What surprised you  
-- Any simple tests or comparisons you ran  
+- Which user profiles you tested: I tested mood and energy
+- What you looked for in the recommendations . I looked ton see if the recommndations wouldnchange hevily if had removed one or the other.
+- What surprised you . What suprised me was that the only thing that changed drasticlly was the points and maybe one song but the rest of the songs matched with the one that wasn't altered.
+- Any simple tests or comparisons you ran. I ran The before/after comparison for the pop/0.8 energy/non-acoustic
 
 No need for numeric metrics unless you created some.
 

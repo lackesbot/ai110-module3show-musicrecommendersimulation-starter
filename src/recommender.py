@@ -85,15 +85,16 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
         score += GENRE_WEIGHT 
         reasons.append(f"Genre matches (+{GENRE_WEIGHT})")
 
-    if song["mood"] == user_prefs["favorite_mood"]:
+    if song["mood"] == user_prefs.get("favorite_mood"):
         score += MOOD_WEIGHT
         reasons.append(f"Mood matches (+{MOOD_WEIGHT})")
 
-    energyS = 1 - abs(song["energy"] - user_prefs["favorite_energy"])
-    score += ENERGY_WEIGHT * energyS
+    if "favorite_energy" in user_prefs:
+        energyS = 1 - abs(song["energy"] - user_prefs["favorite_energy"])
+        score += ENERGY_WEIGHT * energyS
 
-    if energyS > 0.3:
-        reasons.append(f"Energy matches ({+ENERGY_WEIGHT})")
+        if energyS > 0.3:
+            reasons.append(f"Energy matches ({+ENERGY_WEIGHT})")
 
     acousticS = 1 - abs(song["acousticness"] - user_prefs["likes_acoustic"])
     score += ACOUSTIC_WEIGHT * acousticS
